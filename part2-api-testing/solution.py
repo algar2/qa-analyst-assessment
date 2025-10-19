@@ -72,7 +72,7 @@ class TestJSONPlaceholderAPI:
         get_response = requests.get(ENDPOINT + '/users/999')
         status_code = get_response.status_code
 
-
+        # If does not exist, code should be 404 
         assert status_code == 404, f"Expected 404, got {status_code} instead."
         print("User 999 does not exist")
 
