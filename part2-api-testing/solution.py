@@ -35,6 +35,7 @@ class TestJSONPlaceholderAPI:
         assert "email" in data, "'email' is not found in JSON response"
 
 
+
     def test_create_new_post(self):
         """
         Method for creating a new post and verifying its creation. 
@@ -50,9 +51,9 @@ class TestJSONPlaceholderAPI:
         }
 
         create_task_response = requests.post(ENDPOINT + '/posts', json=payload)
+        
         # Post successfully created 
         assert create_task_response.status_code == 201
-
         data = create_task_response.json()
 
         # Validating that created post contains sent JSON data
