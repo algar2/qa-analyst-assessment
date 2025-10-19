@@ -16,7 +16,8 @@
 
 **Time Spent** ~30 Minutes
 
-**Approach**: I wrote simple tests to cover the three cases of a GET request, POST request, and Error handling. For the GET request, I used the sample endpoint and because we need to verify that the user exists, I assert that the response is successful and that the required id, name, and email fields are all present in the response. Similarly for a POST request, I create a sample payload containing required fields for a post and verify that the post request was successful. I then validate that the response data matches that of the payload. Finally to test 404 responses, I just fetch user 999 and validate it does not exist.
+**Approach**: I wrote simple tests to cover the three cases of a GET request, POST request, and Error handling. For the GET request, I used the sample endpoint and because we need to verify that the user exists, I assert that the response is successful and that the required id, name, and email fields are all present in the response. Similarly for a POST request, I create a sample payload containing required fields for a post and verify that the post request was successful with the proper status code and that
+the generated response contains the required fields. Finally to test 404 responses, I just fetch user 999 and validate it does not exist through checking the status code.
 
 ## How to Run
 
