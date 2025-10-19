@@ -35,8 +35,9 @@ def remove_duplicates(duplicate_list):
     }
 
     duplicate_free_list = []
-    # 
+    
     for digit in duplicate_list:
+        # Only add digit if it has not yet been encountered (not duplicate)
         if digit_occurences[digit] == 0:
             duplicate_free_list.append(digit)
             digit_occurences[digit] += 1
